@@ -1,0 +1,34 @@
+{
+  "name": "TheLounge",
+  "version": "1.0.0",
+  "author": "driftywinds",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "package": "electron-builder"
+  },
+  "build": {
+    "appId": "win.drifty.thelounge",
+	"productName": "The Lounge",
+    "files": [
+      "main.js",
+      "preload.js",
+      "14336958.ico"
+    ],
+    "icon": "14336958.ico",
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "devDependencies": {
+    "electron": "^latest",
+    "electron-builder": "^latest"
+  }
+}
